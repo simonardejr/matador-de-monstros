@@ -11,24 +11,24 @@
 	<div id="app">
 		<div v-if="running || logs.length > 0" class="panel scores">
 			<div class="score">
-				<h1>{{ playerName }}</h1>
+				<h1>{{ player.name }}</h1>
 				<div class="life-bar">
-					<div class="life" :class="{danger: playerLife < 20}" :style="{width: playerLife + '%'}"></div>
+					<div class="life" :class="{danger: player.life < 20}" :style="{width: player.life + '%'}"></div>
 				</div>
-				<div>{{ playerLife }}%</div>
+				<div>{{ player.life }}%</div>
 			</div>
 
 			<div class="score">
 				<h1>Monstro</h1>
 				<div class="life-bar">
-					<div class="life" :class="{danger: monsterLife < 20}" :style="{width: monsterLife + '%'}"></div>
+					<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>
 				</div>
-				<div>{{ monsterLife }}%</div>
+				<div>{{ monster.life }}%</div>
 			</div>
 		</div>
 		
 		<div v-if="hasResult" class="panel result">
-			<div v-if="monsterLife == 0" class="win">Você ganhou!</div>
+			<div v-if="monster.life == 0" class="win">Você ganhou!</div>
 			<div v-else class="lose">Você perdeu!</div>
 			
 		</div>
@@ -36,12 +36,12 @@
 		<div class="panel buttons">
 			<template v-if="running">
 				<button @click="attack(false)" class="btn attack">Ataque</button>
-				<button @click="attack(true)" class="btn special-attack" :class="{canUseSpecial: !canUseSpecial}" :disabled="!canUseSpecial">Ataque especial ({{ playerCanUseSpecial-specialUsed }})</button>
-				<button @click="healAndHurt" class="btn heal" :class="{canUseHeal: !canUseHeal}" :disabled="!canUseHeal">Curar ({{ playerCanHeal-healUsed }})</button>
+				<button @click="attack(true)" class="btn special-attack" :class="{canUseSpecial: !canUseSpecial}" :disabled="!canUseSpecial">Ataque especial ({{ player.special.available-player.special.used }})</button>
+				<button @click="healAndHurt" class="btn heal" :class="{canUseHeal: !canUseHeal}" :disabled="!canUseHeal">Curar ({{ player.heal.available-player.heal.used }})</button>
 				<button @click="running = false" class="btn give-up">Desistir</button>
 			</template>
 			<template v-else>
-				<input type="text" v-model="playerName" placeholder="Digite o nome do seu personagem" size="30">
+				<input type="text" v-model="player.name" placeholder="Digite o nome do seu personagem" size="30">
 				<button @click="startGame" class="btn new-game">Iniciar jogo</button>
 			</template>
 		</div>
