@@ -3,64 +3,72 @@ new Vue({
 	
 	data: {
 		running: false,
-		playerName: 'Jogador',
-		playerLife: 100,
-		monsterLife: 100,
-		playerCanHeal: 10,
-		playerCanUseSpecial: 4,
-		specialUsed: 0,
-		healUsed: 0,
 		logs: [],
+		player: {
+			name: 'Jogador',
+			life: 100,
+			heal: {
+				available: 10,
+				used: 0
+			},
+			special: {
+				available: 4,
+				used: 0
+			}
+		},
+		monster: {
+			life: 100
+		}
 	},
 	
 	computed: {
 		hasResult() {
-			return this.playerLife == 0 || this.monsterLife == 0
+			return this.player.life == 0 || this.monster.life == 0
 		},
 		canUseSpecial() {
-			return this.specialUsed < this.playerCanUseSpecial
+			return this.player.special.used < this.player.special.available
 		},
 		canUseHeal() {
-			return this.healUsed < this.playerCanHeal
+			return this.player.heal.used < this.player.heal.available
 		}
 	},
 
 	methods: {
 		startGame() {
 			this.running = true
-			this.playerLife = 100
-			this.monsterLife = 100
-			this.specialUsed = 0
-			this.healUsed = 0
+			this.player.life = 100
+			this.monster.life = 100
+			this.player.special.used = 0
+			this.player.heal.used = 0
 			this.logs = []
 		},
 
 		attack(special) {
-			this.hurt('monsterLife', 5,10, special, 'Jogador', 'Monstro', 'player')
-			if(this.monsterLife > 0) {
-				this.hurt('playerLife', 7,12, false, 'Monstro', 'Jogador', 'monster')
+			this.hurt('monster', 5,10, special, this.player.name, 'Monstro', 'player')
+			if(this.monster.life > 0) {
+				this.hurt('player', 7,12, false, 'Monstro', this.player.name, 'monster')
 			}
 		},
 
 		hurt(player, min, max, special, source, target, cls) {
-			if(special) this.specialUsed++
+			if(special) this.player.special.used++
 
 			const plus = this.canUseSpecial ? special ? 5 : 0 : 0
 			const hurt = this.getRandom(min + plus, max + plus)
-			this[player] = Math.max(this[player] - hurt, 0)
+			this[player].life = Math.max(this[player].life - hurt, 0)
 
 			this.registerLog(`${source} atingiu ${target} com ${hurt} de dano` + (special ? ' usando um ataque especial' : ''), special ? 'special' : cls)
 		},
 
 		healAndHurt() {
 			this.heal(10, 15)
-			this.hurt('playerLife', 7, 12, false, 'Monstro', 'Jogador', 'monster')
+			this.hurt('player', 7, 12, false, 'Monstro', 'Jogador', 'monster')
 		},
 
 		heal(min, max) {
-			this.healUsed++
+			this.player.heal.used++
 			const heal = this.getRandom(min,max);
-			this.playerLife = Math.min(this.playerLife + heal, 100)
+			this.player.life = Math.min(this.player.life + heal, 100)
 			this.registerLog(`Jogador ganhou ${heal} de life`, 'heal')
 		},
 
