@@ -25,6 +25,7 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 25px;
 }
 
 .score h1 {
@@ -71,18 +72,11 @@ html {
 .buttons {
 	display: flex;
 	justify-content: center;
-
 }
 
 .btn {
-	padding: 5px 10px;
-	margin: 0 10px;
-	border-radius: 5px;
-	text-transform: uppercase;
-	font-size: 1.1rem;
-	border: none;
-	cursor: pointer;
-
+	margin: 5px;
+	font-weight: bold;
 }
 
 .btn.new-game {
@@ -91,13 +85,13 @@ html {
 }
 
 .btn.attack {
-	background-color: #e51c23;
+	background-color: #e59547;
 	color: #ffffff;
 }
 
 .btn.special-attack {
-	background-color: #ff9800;
-	color: #000000;
+	background-color: #6649ff;
+	color: #ffffff;
 }
 
 .btn.canUseSpecial {
@@ -107,7 +101,7 @@ html {
 }
 
 .btn.heal {
-	background-color: #259b24;
+	background-color: #39923f;
 	color: #ffffff;
 }
 
@@ -144,7 +138,7 @@ html {
 }
 
 .log.player {
-	background-color: #4253afaa;
+	background-color: rgba(229, 149, 71, 0.88);
 	color: #ffffff;
 }
 
@@ -154,11 +148,11 @@ html {
 }
 
 .log.heal {
-	background-color: #fff3cd;
-	color: #000000;
+	background-color: rgba(57, 146, 63, 0.8);
+	color: #ffffff;
 }
 
 .log.special {
-	background-color: #d4edda;
-	color: #000000;
+	background-color: rgba(102, 73, 255, 0.85);
+	color: #ffffff;
 }
