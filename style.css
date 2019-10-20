@@ -31,6 +31,8 @@ html {
 .score h1 {
 	font-weight: 300;
 	font-size: 1.6rem;
+	margin-top: 0;
+	text-transform: capitalize;
 }
 
 .score h1 span {
@@ -52,6 +54,10 @@ html {
 
 .life-bar .life.danger {
 	background-color: red;
+}
+
+.monster-img {
+	margin-top: 45px;
 }
 
 /* Área de resultado */
