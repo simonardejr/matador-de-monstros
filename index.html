@@ -22,6 +22,22 @@
 						<div class="input-field">
 							<input id="player_name" placeholder="Nome do Personagem" type="text" required  v-model="player.name">
 						</div>
+						<div class="input-field">
+							<p>
+								<label>
+									<input class="with-gap" name="difficulty" type="radio" v-model="difficulty" value="1"/>
+									<span>Fácil</span>
+								</label>
+								<label>
+									<input class="with-gap" name="difficulty" type="radio" v-model="difficulty" value="2"/>
+									<span>Normal</span>
+								</label>
+								<label>
+									<input class="with-gap" name="difficulty" type="radio"  v-model="difficulty" value="3"/>
+									<span>Difícil</span>
+								</label>
+							</p>
+						</div>
 					</div>
 				</div>
 				<div class="row center">
@@ -48,7 +64,7 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score">
-								<h1>Monstro</h1>
+								<h1>Monstro <span>nível {{ difficulty }}</span></h1>
 								<div class="life-bar">
 									<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>
 								</div>
@@ -105,6 +121,7 @@
 
 	</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

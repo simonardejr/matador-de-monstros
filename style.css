@@ -33,6 +33,10 @@ html {
 	font-size: 1.6rem;
 }
 
+.score h1 span {
+	font-size: 1.0rem;
+}
+
 .life-bar {
 	width: 80%;
 	height: 20px;
