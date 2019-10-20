@@ -17,7 +17,12 @@ new Vue({
 			}
 		},
 		monster: {
-			life: 100
+			life: 100,
+			type: [
+				'slime',
+				'eye',
+				'lizard'
+			]
 		},
 		difficulty: 2
 	},

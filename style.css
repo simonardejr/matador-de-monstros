@@ -55,6 +55,10 @@ html {
 	background-color: red;
 }
 
+.monster-img {
+	margin-top: 45px;
+}
+
 /* Área de resultado */
 
 .result {

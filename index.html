@@ -65,7 +65,7 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score">
-								<p><img src="./characters/monster.gif" alt=""></p>
+								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img"></p>
 								<h1>Monstro <span>nível {{ difficulty }}</span></h1>
 								<div class="life-bar">
 									<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>
