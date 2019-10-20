@@ -18,7 +18,8 @@ new Vue({
 		},
 		monster: {
 			life: 100
-		}
+		},
+		difficulty: 1
 	},
 	
 	computed: {
@@ -46,8 +47,12 @@ new Vue({
 		attack(special) {
 			this.hurt('monster', 5,10, special, this.player.name, 'Monstro', 'player')
 			if(this.monster.life > 0) {
-				this.hurt('player', 7,12, false, 'Monstro', this.player.name, 'monster')
+				this.hurt('player', 5, this.getMaxMonsterDamage(), false, 'Monstro', this.player.name, 'monster')
 			}
+		},
+
+		getMaxMonsterDamage() {
+			return this.difficulty * 0.7 * 10
 		},
 
 		hurt(player, min, max, special, source, target, cls) {

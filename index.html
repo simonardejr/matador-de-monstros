@@ -19,7 +19,7 @@
 			</div>
 
 			<div class="score">
-				<h1>Monstro</h1>
+				<h1>Monstro <span>nível {{ difficulty }}</span></h1>
 				<div class="life-bar">
 					<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>
 				</div>
@@ -42,6 +42,11 @@
 			</template>
 			<template v-else>
 				<input type="text" v-model="player.name" placeholder="Digite o nome do seu personagem" size="30">
+				<select name="difficulty" v-model="difficulty">
+					<option value="1">Fácil</option>
+					<option value="2">Normal</option>
+					<option value="3">Difícil</option>
+				</select>
 				<button @click="startGame" class="btn new-game">Iniciar jogo</button>
 			</template>
 		</div>
