@@ -1,6 +1,6 @@
 new Vue({
 	el: '#app',
-	
+
 	data: {
 		running: false,
 		logs: [],
@@ -19,9 +19,9 @@ new Vue({
 		monster: {
 			life: 100
 		},
-		difficulty: 1
+		difficulty: 2
 	},
-	
+
 	computed: {
 		hasResult() {
 			return this.player.life == 0 || this.monster.life == 0
