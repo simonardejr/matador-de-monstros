@@ -14,7 +14,8 @@ new Vue({
 			special: {
 				available: 4,
 				used: 0
-			}
+			},
+			image: 'hero-idle'
 		},
 		monster: {
 			life: 100,
@@ -50,10 +51,18 @@ new Vue({
 		},
 
 		attack(special) {
+			this.heroAtack()
 			this.hurt('monster', 5,10, special, this.player.name, 'Monstro', 'player')
 			if(this.monster.life > 0) {
 				this.hurt('player', 5, this.getMaxMonsterDamage(), false, 'Monstro', this.player.name, 'monster')
 			}
+		},
+
+		heroAtack() {
+			this.player.image = 'hero-atack'
+			setTimeout(() => {
+				this.player.image = 'hero-idle'
+			}, 500)
 		},
 
 		getMaxMonsterDamage() {
