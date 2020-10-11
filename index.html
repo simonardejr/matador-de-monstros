@@ -89,6 +89,10 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score p">
+								<p :class="{'animate__animated animate__fadeInUp': hurtAnimation.player }" class="hurtDamagePopup">
+									&nbsp;
+									<span v-if="showDamagePopup.player">-{{ hurtDamage }}</span>
+								</p>
 								<p><img :src="'./characters/' + player.image + '.gif'" alt="" :class="{'animate__animated animate__shakeX': hurtAnimation.player }"></p>
 								<h1>{{ player.name }}</h1>
 								<div class="life-bar">
@@ -101,6 +105,10 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score">
+								<p :class="{'animate__animated animate__fadeInUp': hurtAnimation.monster }" class="hurtDamagePopup">
+									&nbsp;
+									<span v-if="showDamagePopup.monster">-{{ hurtDamage }}</span>
+								</p>
 								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img" :class="{'animate__animated animate__shakeX': hurtAnimation.monster }"></p>
 								<h1>{{ monster.type[(difficulty-1)] }} <span>nível {{ difficulty }}</span></h1>
 								<div class="life-bar">

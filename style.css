@@ -60,6 +60,12 @@ html {
 	margin-top: 45px;
 }
 
+.hurtDamagePopup {
+	color: red;
+	font-size: 25px; 
+	margin: 10px 0 0 0;
+}
+
 /* Área de resultado */
 
 .result {

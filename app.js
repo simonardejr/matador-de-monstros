@@ -30,6 +30,11 @@ new Vue({
 		hurtAnimation: {
 			player: false,
 			monster: false
+		},
+		hurtDamage: 0,
+		showDamagePopup: {
+			player: false,
+			monster: false
 		}
 	},
 
@@ -80,21 +85,23 @@ new Vue({
 			if(special) this.player.special.used++
 
 			const plus = this.canUseSpecial ? special ? 5 : 0 : 0
-			const hurt = this.getRandom(min + plus, max + plus)
-			this[player].life = Math.max(this[player].life - hurt, 0)
+			this.hurtDamage = this.getRandom(min + plus, max + plus)
+			this[player].life = Math.max(this[player].life - this.hurtDamage, 0)
 
 			this.controlHurtAnimation(player)
 
-			this.registerLog(`${source} atingiu ${target} com ${hurt} de dano` + (special ? ' usando um ataque especial' : ''), special ? 'special' : cls)
+			this.registerLog(`${source} atingiu ${target} com ${this.hurtDamage} de dano` + (special ? ' usando um ataque especial' : ''), special ? 'special' : cls)
 		},
 
 		controlHurtAnimation(player) {
 			setTimeout(() => {
 				this.hurtAnimation[player] = true
+				this.showDamagePopup[player] = true
 			}, 500)
 
 			setTimeout(() => {
 				this.hurtAnimation[player] = false
+				this.showDamagePopup[player] = false
 			}, 1200)
 		},
 
