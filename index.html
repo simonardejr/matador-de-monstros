@@ -109,7 +109,7 @@
 									&nbsp;
 									<span v-if="showDamagePopup.monster">-{{ hurtDamage }}</span>
 								</p>
-								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img" :class="{'animate__animated animate__shakeX': hurtAnimation.monster }"></p>
+								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img" :class="{'animate__animated animate__shakeX': hurtAnimation.monster }" :style="'filter: hue-rotate(' + monster.color + 'deg);'"></p>
 								<h1>{{ monster.type[(difficulty-1)] }} <span>nível {{ difficulty }}</span></h1>
 								<div class="life-bar">
 									<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>

@@ -23,7 +23,8 @@ new Vue({
 				'slime',
 				'eye',
 				'lizard'
-			]
+			],
+			color: 0
 		},
 		difficulty: 2,
 		isOpen: false,
@@ -57,7 +58,8 @@ new Vue({
 			this.monster.life = 100
 			this.player.special.used = 0
 			this.player.heal.used = 0
-			this.logs = []
+			this.logs = [],
+			this.monster.color = Math.floor(Math.random() * 360) + 1
 		},
 
 		attack(special) {
