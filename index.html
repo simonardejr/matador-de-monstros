@@ -5,6 +5,7 @@
 	<title>Matador de Monstros</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://unpkg.com/vue"></script>
 </head>
@@ -88,7 +89,7 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score p">
-								<p><img :src="'./characters/' + player.image + '.gif'" alt=""></p>
+								<p><img :src="'./characters/' + player.image + '.gif'" alt="" :class="{'animate__animated animate__shakeX': hurtAnimation.player }"></p>
 								<h1>{{ player.name }}</h1>
 								<div class="life-bar">
 									<div class="life" :class="{danger: player.life < 20}" :style="{width: player.life + '%'}"></div>
@@ -100,7 +101,7 @@
 					<div class="col s6">
 						<div class="card">
 							<div class="score">
-								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img"></p>
+								<p><img :src="'./characters/' + monster.type[(difficulty-1)] + '.gif'" alt="" class="monster-img" :class="{'animate__animated animate__shakeX': hurtAnimation.monster }"></p>
 								<h1>{{ monster.type[(difficulty-1)] }} <span>nível {{ difficulty }}</span></h1>
 								<div class="life-bar">
 									<div class="life" :class="{danger: monster.life < 20}" :style="{width: monster.life + '%'}"></div>

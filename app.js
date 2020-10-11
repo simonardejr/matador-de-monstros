@@ -26,7 +26,11 @@ new Vue({
 			]
 		},
 		difficulty: 2,
-		isOpen: false
+		isOpen: false,
+		hurtAnimation: {
+			player: false,
+			monster: false
+		}
 	},
 
 	computed: {
@@ -53,10 +57,12 @@ new Vue({
 
 		attack(special) {
 			this.heroAtack()
-			this.hurt('monster', 5,10, special, this.player.name, 'Monstro', 'player')
-			if(this.monster.life > 0) {
-				this.hurt('player', 5, this.getMaxMonsterDamage(), false, 'Monstro', this.player.name, 'monster')
-			}
+			this.hurt('monster', 5, 10, special, this.player.name, 'Monstro', 'player')
+			setTimeout(() => {
+				if(this.monster.life > 0) {
+					this.hurt('player', 5, this.getMaxMonsterDamage(), false, 'Monstro', this.player.name, 'monster')
+				}
+			}, 2000)
 		},
 
 		heroAtack() {
@@ -77,7 +83,19 @@ new Vue({
 			const hurt = this.getRandom(min + plus, max + plus)
 			this[player].life = Math.max(this[player].life - hurt, 0)
 
+			this.controlHurtAnimation(player)
+
 			this.registerLog(`${source} atingiu ${target} com ${hurt} de dano` + (special ? ' usando um ataque especial' : ''), special ? 'special' : cls)
+		},
+
+		controlHurtAnimation(player) {
+			setTimeout(() => {
+				this.hurtAnimation[player] = true
+			}, 500)
+
+			setTimeout(() => {
+				this.hurtAnimation[player] = false
+			}, 1200)
 		},
 
 		healAndHurt() {
