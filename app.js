@@ -25,7 +25,8 @@ new Vue({
 				'lizard'
 			]
 		},
-		difficulty: 2
+		difficulty: 2,
+		isOpen: false
 	},
 
 	computed: {

@@ -42,7 +42,45 @@
 				</div>
 				<div class="row center">
 					<a class="waves-effect btn blue-grey darken-3" @click="startGame" :disabled="!player.name">Iniciar Jogo</a>
+					<a class="waves-effect btn blue-grey darken-3" @click="isOpen = !isOpen;">Como Jogar</a>
 				</div>
+
+				<transition name="modal">
+					<div v-if="isOpen">
+						<div class="overlay" @click.self="isOpen = false;">
+							<div class="modal">
+								<img src="./logo/mdm.png" alt="Matador de Monstros" width="300px" class="responsive-img">
+								<h1>Como Jogar</h1>
+
+								<h5>Menu Inicial</h5>
+								<ul>
+									<li>
+										1 - Escolha o nome do seu jogador
+									</li>
+									<li>
+										2 - Escolha o nivel do seu jogo
+									</li>
+									<li>
+										3 -	Clique em jogar
+									</li>
+								</ul>
+
+								<h5>Batalha</h5>
+								<ul>
+									<li>
+										<strong>Ataque -></strong> Você ataque o seu adiversario e recebe um dano de volta
+									</li>
+									<li>
+										<strong>Ataque Especial -></strong> Você tem um poder de ataque maior e recebe um dano de volta
+									</li>
+									<li>
+										<strong>Curar -></strong> Você ganha uma quantidade x de vida e recebe um ataque do seu adiversario
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</transition>
 			</div>
 
 			<div class="container" v-if="running">
