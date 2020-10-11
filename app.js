@@ -25,7 +25,8 @@ new Vue({
 				'lizard'
 			]
 		},
-		difficulty: 2
+		difficulty: 2,
+		isOpen: false
 	},
 
 	computed: {
@@ -81,14 +82,14 @@ new Vue({
 
 		healAndHurt() {
 			this.heal(10, 15)
-			this.hurt('player', 7, 12, false, 'Monstro', 'Jogador', 'monster')
+			this.hurt('player', 7, 12, false, this.monster.type[parseInt(this.difficulty) - 1], this.player.name, 'monster')
 		},
 
 		heal(min, max) {
 			this.player.heal.used++
 			const heal = this.getRandom(min,max);
 			this.player.life = Math.min(this.player.life + heal, 100)
-			this.registerLog(`Jogador ganhou ${heal} de life`, 'heal')
+			this.registerLog(`${this.player.name} ganhou ${heal} de life`, 'heal')
 		},
 
 		registerLog(text, cls) {
