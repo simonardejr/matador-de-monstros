@@ -36,7 +36,7 @@ new Vue({
 		showDamagePopup: {
 			player: false,
 			monster: false
-		}
+		},
 	},
 
 	computed: {
@@ -74,6 +74,8 @@ new Vue({
 
 		heroAtack() {
 			this.player.image = 'hero-atack'
+			var audioAttack = new Audio('audio/attack.wav')
+			audioAttack.play()
 			setTimeout(() => {
 				this.player.image = 'hero-idle'
 			}, 500)
