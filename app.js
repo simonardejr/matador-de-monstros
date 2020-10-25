@@ -104,14 +104,14 @@ new Vue({
 		},
 
 		setTurn(player) {
+			this.monsterTurn = true
+
 			if(player == 'monster') {
 				setTimeout(() => {
 					this.monsterTurn = false
 				}, 3200)
 				return
 			}
-
-			this.monsterTurn = true
 		},
 
 		controlHurtAnimation(player) {
@@ -128,10 +128,16 @@ new Vue({
 
 		healAndHurt() {
 			this.heal(10, 15)
-			this.hurt('player', 7, 12, false, this.monster.type[parseInt(this.difficulty) - 1], this.player.name, 'monster')
+			setTimeout(() => {
+				this.hurt('player', 7, 12, false, this.monster.type[parseInt(this.difficulty) - 1], this.player.name, 'monster')
+			}, 2000)
+			
 		},
 
 		heal(min, max) {
+			this.setTurn('monster')
+			let audioHeal = new Audio('audio/heal.wav')
+			audioHeal.play()
 			this.player.heal.used++
 			const heal = this.getRandom(min,max);
 			this.player.life = Math.min(this.player.life + heal, 100)
