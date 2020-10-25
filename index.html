@@ -50,8 +50,10 @@
 					<div v-if="isOpen">
 						<div class="overlay" @click.self="isOpen = false;">
 							<div class="modal">
-								<img src="./logo/mdm.png" alt="Matador de Monstros" width="300px" class="responsive-img">
-								<h1>Como Jogar</h1>
+								<div class="text-center">
+									<img src="./logo/mdm.png" alt="Matador de Monstros" width="300px" class="responsive-img">
+									<h1>Como Jogar</h1>
+								</div>
 
 								<h5>Menu Inicial</h5>
 								<ul>
@@ -59,25 +61,31 @@
 										1 - Escolha o nome do seu jogador
 									</li>
 									<li>
-										2 - Escolha o nivel do seu jogo
+										2 - Escolha o nível do seu jogo
 									</li>
 									<li>
-										3 -	Clique em jogar
+										3 -	Clique em "Iniciar Jogo"
 									</li>
 								</ul>
 
 								<h5>Batalha</h5>
-								<ul>
+								<ul class="instructions">
 									<li>
-										<strong>Ataque -></strong> Você ataque o seu adiversario e recebe um dano de volta
+										<strong class="instructions-attack">Ataque &#8674</strong> Você ataca o seu adversário e recebe um dano de volta
 									</li>
 									<li>
-										<strong>Ataque Especial -></strong> Você tem um poder de ataque maior e recebe um dano de volta
+										<strong class="instructions-special-attack">Ataque Especial &#8674</strong> Você tem um poder de ataque maior e recebe um dano de volta. Você tem apenas 4 ataques especiais.
 									</li>
 									<li>
-										<strong>Curar -></strong> Você ganha uma quantidade x de vida e recebe um ataque do seu adiversario
+										<strong class="instructions-heal">Curar &#8674</strong> Você ganha uma quantidade x de vida e recebe um ataque do seu adversário. Você pode usar 10 poções de cura.
+									</li>
+									<li>
+										<strong class="instructions-giveup">Desistir &#8674</strong> Desiste do jogo e volta para a tela inicial
 									</li>
 								</ul>
+								<div class="text-center">
+									<button @click="isOpen = false" class="btn btn-success">Fechar</button>
+								</div>
 							</div>
 						</div>
 					</div>

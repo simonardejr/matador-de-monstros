@@ -161,10 +161,17 @@ html {
 	background-color: rgba(229, 149, 71, 0.88);
 	color: #ffffff;
 }
+.log.player:nth-child(n+2) {
+	background-color: rgba(229, 150, 71, 0.445);
+}
 
 .log.monster {
 	background-color: #e51c23aa;
 	color: #ffffff;
+}
+
+.log.monster:nth-child(n+2) {
+	background-color: #e51c2345;
 }
 
 .log.heal {
@@ -172,9 +179,17 @@ html {
 	color: #ffffff;
 }
 
+.log.heal:nth-child(n+2) {
+	background-color:  rgba(57, 146, 63, 0.445);
+}
+
 .log.special {
 	background-color: rgba(102, 73, 255, 0.85);
 	color: #ffffff;
+}
+
+.log.special:nth-child(n+2) {
+	background-color:  rgba(102, 73, 255, 0.445);
 }
 
 /* Modal */
@@ -189,14 +204,13 @@ html {
 	transition: all 0.2s ease-in;
 	font-family: Helvetica, Arial, sans-serif;
 	display: block;
-	text-align: center;
 }
 
-.modal>img {
+.modal > div > img {
 	width: 150px;
 }
 
-.modal>h1 {
+.modal > div > h1 {
 	font-size: 45px;
 }
 
@@ -230,4 +244,28 @@ html {
 
 .modal strong {
 	font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.instructions li {
+	padding: 3px 0 3px 0;
+}
+
+.instructions-attack {
+	color: #e59547
+}
+
+.instructions-special-attack {
+	color: #6649ff
+}
+
+.instructions-heal {
+	color: #39923f
+}
+
+.instructions-giveup {
+	color: #bbbbbb
 }
