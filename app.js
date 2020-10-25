@@ -37,6 +37,7 @@ new Vue({
 			player: false,
 			monster: false
 		},
+		monsterTurn: false
 	},
 
 	computed: {
@@ -48,6 +49,9 @@ new Vue({
 		},
 		canUseHeal() {
 			return this.player.heal.used < this.player.heal.available
+		},
+		isMonsterTurn() {
+			return this.monsterTurn
 		}
 	},
 
@@ -62,7 +66,7 @@ new Vue({
 			this.monster.color = Math.floor(Math.random() * 360) + 1
 		},
 
-		attack(special) {
+		attack(special=false) {
 			this.heroAtack()
 			this.hurt('monster', 5, 10, special, this.player.name, this.monster.type[parseInt(this.difficulty) - 1], 'player')
 			setTimeout(() => {
@@ -76,9 +80,11 @@ new Vue({
 			this.player.image = 'hero-atack'
 			var audioAttack = new Audio('audio/attack.wav')
 			audioAttack.play()
+			this.setTurn('player')
 			setTimeout(() => {
 				this.player.image = 'hero-idle'
 			}, 500)
+			this.setTurn('monster')
 		},
 
 		getMaxMonsterDamage() {
@@ -95,6 +101,17 @@ new Vue({
 			this.controlHurtAnimation(player)
 
 			this.registerLog(`${source} atingiu ${target} com ${this.hurtDamage} de dano` + (special ? ' usando um ataque especial' : ''), special ? 'special' : cls)
+		},
+
+		setTurn(player) {
+			if(player == 'monster') {
+				setTimeout(() => {
+					this.monsterTurn = false
+				}, 3200)
+				return
+			}
+
+			this.monsterTurn = true
 		},
 
 		controlHurtAnimation(player) {

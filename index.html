@@ -87,7 +87,7 @@
 			<div class="container" v-if="running">
 				<div class="row">
 					<div class="col s6">
-						<div class="card">
+						<div class="card" :class="!isMonsterTurn ? 'playerTurn' : ''">
 							<div class="score p">
 								<p :class="{'animate__animated animate__fadeInUp': hurtAnimation.player }" class="hurtDamagePopup">
 									&nbsp;
@@ -103,7 +103,7 @@
 						</div>
 					</div>
 					<div class="col s6">
-						<div class="card">
+						<div class="card" :class="isMonsterTurn ? 'playerTurn' : ''">
 							<div class="score">
 								<p :class="{'animate__animated animate__fadeInUp': hurtAnimation.monster }" class="hurtDamagePopup">
 									&nbsp;
@@ -126,10 +126,10 @@
 					<div class="col s12">
 						<div class="card">
 							<div class="card-content buttons">
-								<button @click="attack(false)" class="btn attack">Ataque</button>
-								<button @click="attack(true)" class="btn special-attack" :class="{canUseSpecial: !canUseSpecial}" :disabled="!canUseSpecial">Ataque especial ({{ player.special.available-player.special.used }})</button>
-								<button @click="healAndHurt" class="btn heal" :class="{canUseHeal: !canUseHeal}" :disabled="!canUseHeal">Curar ({{ player.heal.available-player.heal.used }})</button>
-								<button @click="running = false" class="btn give-up">Desistir</button>
+								<button @click="attack()" class="btn attack" :disabled="isMonsterTurn">Ataque</button>
+								<button @click="attack(true)" class="btn special-attack" :class="{canUseSpecial: !canUseSpecial}" :disabled="!canUseSpecial || isMonsterTurn">Ataque especial ({{ player.special.available-player.special.used }})</button>
+								<button @click="healAndHurt" class="btn heal" :class="{canUseHeal: !canUseHeal}" :disabled="!canUseHeal || isMonsterTurn">Curar ({{ player.heal.available-player.heal.used }})</button>
+								<button @click="running = false" class="btn give-up" :disabled="isMonsterTurn">Desistir</button>
 							</div>
 						</div>
 					</div>

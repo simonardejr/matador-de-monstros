@@ -60,6 +60,10 @@ html {
 	margin-top: 45px;
 }
 
+.playerTurn {
+	background-color: ivory;
+}
+
 .hurtDamagePopup {
 	color: red;
 	font-size: 25px; 
