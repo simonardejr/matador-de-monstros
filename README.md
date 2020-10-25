@@ -61,6 +61,10 @@ Primeiramente, muito obrigado pelo interesse em contribuir! Esse jogo foi feito 
 
 É importante lembrar que as contribuições não precisam ser necessariamente com códigos. Você pode contribuir sugerindo novas funcionalidades, com documentação, enfim, com qualquer coisa que desejar!
 
+## Créditos
+
+1. Ataque da espada - [Joel Azzopardi](https://freesound.org/people/JoelAudio/sounds/77611/)
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- [product-screenshot]: # -->
