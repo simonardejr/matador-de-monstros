@@ -76,6 +76,14 @@ Obrigado à todos! 🎉👏👍
 1. Ataque da espada - [Joel Azzopardi](https://freesound.org/people/JoelAudio/sounds/77611/)
 2. Trilha sonora - [Sirkoto51](https://freesound.org/people/Sirkoto51/sounds/416632/)
 3. Som de cura - [lulyc](https://freesound.org/people/lulyc/sounds/346116/)
+4. Som do Slime - [qubodup](https://freesound.org/people/qubodup/sounds/442772/)
+5. Som do Eye - [qubodup](https://freesound.org/people/qubodup/sounds/442880/)
+6. Som do Lizard - [jessepash](https://freesound.org/people/jessepash/sounds/235378/)
+7. Imagem do Slime - [Luis Zuno (@ansimuz)](http://ansimuz.com) | [Grotto Escape Game Art Pack](https://ansimuz.itch.io/grotto-escape-game-art-pack)
+8. Imagem do Eye - [Luis Zuno (@ansimuz)](http://ansimuz.com) | [Grotto Escape Game Art Pack](https://ansimuz.itch.io/grotto-escape-game-art-pack)
+9. Imagem do Lizard - [Luis Zuno (@ansimuz)](http://ansimuz.com) | [Grotto Escape Game Art Pack](https://ansimuz.itch.io/grotto-escape-game-art-pack)
+10. Imagem do Knight - [rvros](https://rvros.itch.io/animated-pixel-knight)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

@@ -71,6 +71,7 @@ new Vue({
 			this.hurt('monster', 5, 10, special, this.player.name, this.monster.type[parseInt(this.difficulty) - 1], 'player')
 			setTimeout(() => {
 				if(this.monster.life > 0) {
+					this.playSound('monster')
 					this.hurt('player', 5, this.getMaxMonsterDamage(), false, this.monster.type[parseInt(this.difficulty) - 1], this.player.name, 'monster')
 				}
 			}, 2000)
@@ -112,6 +113,11 @@ new Vue({
 				}, 3200)
 				return
 			}
+		},
+
+		playSound(player) {
+			let audioPlay = new Audio('audio/' + this.monster.type[parseInt(this.difficulty)-1] + '.wav')
+			audioPlay.play()
 		},
 
 		controlHurtAnimation(player) {
