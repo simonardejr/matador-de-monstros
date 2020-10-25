@@ -64,7 +64,7 @@ Primeiramente, muito obrigado pelo interesse em contribuir! Esse jogo foi feito 
 ## Créditos
 
 1. Ataque da espada - [Joel Azzopardi](https://freesound.org/people/JoelAudio/sounds/77611/)
-1. Trilha de fundo - [Sirkoto51](https://freesound.org/people/Sirkoto51/sounds/416632/)
+1. Trilha sonora - [Sirkoto51](https://freesound.org/people/Sirkoto51/sounds/416632/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
