@@ -61,10 +61,21 @@ Primeiramente, muito obrigado pelo interesse em contribuir! Esse jogo foi feito 
 
 É importante lembrar que as contribuições não precisam ser necessariamente com códigos. Você pode contribuir sugerindo novas funcionalidades, com documentação, enfim, com qualquer coisa que desejar!
 
+## Contribuíram
+1. [Simonarde Lima](https://github.com/simonardejr)
+2. [Raylan Soares](https://github.com/raylansoares)
+3. [Jamessom Queiroz](https://github.com/jamessom)
+4. [Carlos Antonio](https://github.com/carlosantq)
+5. [Victor Castro](https://github.com/KastroWalker)
+6. [Eliver L.](https://github.com/EliverLara)
+
+Obrigado à todos! 🎉👏👍
+
 ## Créditos
 
 1. Ataque da espada - [Joel Azzopardi](https://freesound.org/people/JoelAudio/sounds/77611/)
-1. Trilha sonora - [Sirkoto51](https://freesound.org/people/Sirkoto51/sounds/416632/)
+2. Trilha sonora - [Sirkoto51](https://freesound.org/people/Sirkoto51/sounds/416632/)
+3. Som de cura - [lulyc](https://freesound.org/people/lulyc/sounds/346116/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
