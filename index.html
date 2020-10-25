@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://unpkg.com/vue"></script>
 </head>
-<body>
+<body onload="playBg()">
 	<div id="app">
 
 		<div class="section no-pad-bot">
@@ -168,6 +168,23 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script>
+		function playBg() {
+			var sound = new Howl({
+				src: ['audio/bg1.wav'],
+				autoplay: true,
+				loop: true,
+				volume: 0.4,
+				onplayerror: function() {
+					sound.once('unlock', function() {
+						sound.play();
+					});
+				}
+			});
+			sound.play();
+		}
+	</script>
 </body>
 </html>
