@@ -8,7 +8,7 @@ html {
 }
 
 .panel {
-	margin: 10px;
+	margin: 8px;
 	padding: 20px;
 	box-shadow: 0 2px 10px rgba(0,0,0, 0.15);
 }
@@ -25,7 +25,7 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 }
 
 .score h1 {
@@ -89,9 +89,10 @@ html {
 
 /* Área dos botões */
 
-.buttons {
+.card-content.buttons {
 	display: flex;
 	justify-content: center;
+	padding: 20px;
 }
 
 .btn {
@@ -137,6 +138,26 @@ html {
 }
 
 /* Área de logs */
+
+.card-content.logs {
+	overflow: scroll;
+	height: 130px;
+	padding: 18px;
+}
+
+.logs::-webkit-scrollbar {
+	padding: 5px;
+	width: 10px;
+}
+
+.logs::-webkit-scrollbar-thumb {
+	background: #e59547;  
+	border-radius: 10px;
+}
+
+.logs::-webkit-scrollbar-thumb:hover {
+	background: #cf751a;  
+}
 
 .logs ul {
 	display: flex;
