@@ -68,6 +68,7 @@ Primeiramente, muito obrigado pelo interesse em contribuir! Esse jogo foi feito 
 4. [Carlos Antonio](https://github.com/carlosantq)
 5. [Victor Castro](https://github.com/KastroWalker)
 6. [Eliver L.](https://github.com/EliverLara)
+7. [Felipe Souza](https://github.com/felipelsouza)
 
 Obrigado à todos! 🎉👏👍
 
