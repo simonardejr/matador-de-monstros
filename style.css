@@ -141,8 +141,10 @@ html {
 
 .card-content.logs {
 	overflow: scroll;
-	height: 130px;
-	padding: 18px;
+	/* height: 130px; */
+	height: 140px;
+	/* padding: 18px; */
+	padding: 20px;
 }
 
 .logs::-webkit-scrollbar {
@@ -232,7 +234,8 @@ html {
 }
 
 .modal > div > h1 {
-	font-size: 45px;
+	/* font-size: 45px; */
+	font-size: 42px;
 }
 
 .fadeIn-enter {
