@@ -5,7 +5,7 @@ new Vue({
 		running: false,
 		logs: [],
 		player: {
-			name: 'Jogador',
+			name: 'Jogador' ,
 			life: 100,
 			heal: {
 				available: 10,
@@ -37,7 +37,8 @@ new Vue({
 			player: false,
 			monster: false
 		},
-		monsterTurn: false
+		monsterTurn: false,
+		mode: 'light',
 	},
 
 	computed: {

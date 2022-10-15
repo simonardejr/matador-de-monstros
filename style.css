@@ -5,12 +5,13 @@ html {
 #app {
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
 }
 
 .panel {
 	margin: 8px;
 	padding: 20px;
-	box-shadow: 0 2px 10px rgba(0,0,0, 0.15);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Área dos pontos */
@@ -20,7 +21,7 @@ html {
 }
 
 .score {
-	flex: 1; 
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -66,7 +67,7 @@ html {
 
 .hurtDamagePopup {
 	color: red;
-	font-size: 25px; 
+	font-size: 25px;
 	margin: 10px 0 0 0;
 }
 
@@ -151,12 +152,12 @@ html {
 }
 
 .logs::-webkit-scrollbar-thumb {
-	background: #e59547;  
+	background: #e59547;
 	border-radius: 10px;
 }
 
 .logs::-webkit-scrollbar-thumb:hover {
-	background: #cf751a;  
+	background: #cf751a;
 }
 
 .logs ul {
@@ -182,6 +183,7 @@ html {
 	background-color: rgba(229, 149, 71, 0.88);
 	color: #ffffff;
 }
+
 .log.player:nth-child(n+2) {
 	background-color: rgba(229, 150, 71, 0.445);
 }
@@ -201,7 +203,7 @@ html {
 }
 
 .log.heal:nth-child(n+2) {
-	background-color:  rgba(57, 146, 63, 0.445);
+	background-color: rgba(57, 146, 63, 0.445);
 }
 
 .log.special {
@@ -210,7 +212,7 @@ html {
 }
 
 .log.special:nth-child(n+2) {
-	background-color:  rgba(102, 73, 255, 0.445);
+	background-color: rgba(102, 73, 255, 0.445);
 }
 
 /* Modal */
@@ -227,11 +229,11 @@ html {
 	display: block;
 }
 
-.modal > div > img {
+.modal>div>img {
 	width: 150px;
 }
 
-.modal > div > h1 {
+.modal>div>h1 {
 	font-size: 45px;
 }
 
@@ -290,3 +292,28 @@ html {
 .instructions-giveup {
 	color: #bbbbbb
 }
+
+.dark {
+	background-color: black;
+	color: white;
+}
+
+.dark input , .dark span {
+	color: white;
+}
+
+
+.dark .modal, .dark .score, .dark .card {
+	background-color: black;
+}
+
+
+.light {
+	background-color: white;
+	color: black;
+}
+
+.light input, .light span {
+	color: black;
+}
+
