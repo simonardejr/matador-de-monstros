@@ -142,7 +142,8 @@ html {
 
 .card-content.logs {
 	overflow: scroll;
-	height: 130px;
+	/* height: 130px; */
+	height: 300px;
 	padding: 18px;
 }
 
