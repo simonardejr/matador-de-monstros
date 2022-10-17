@@ -69,6 +69,7 @@ Primeiramente, muito obrigado pelo interesse em contribuir! Esse jogo foi feito 
 5. [Victor Castro](https://github.com/KastroWalker)
 6. [Eliver L.](https://github.com/EliverLara)
 7. [Felipe Souza](https://github.com/felipelsouza)
+8. [Rogério Teles Brollo](https://github.com/rbrollo)
 
 Obrigado à todos! 🎉👏👍
 
