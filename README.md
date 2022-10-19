@@ -19,7 +19,7 @@
 <a href="https://img.shields.io/github/stars/simonardejr/matador-de-monstros"><img src="https://img.shields.io/github/stars/simonardejr/matador-de-monstros"></a>
 <a href="https://github.com/simonardejr/matador-de-monstros/network/members"><img src="https://img.shields.io/github/forks/simonardejr/matador-de-monstros"></a>
 
-![Hacktober-shield] ![Hacktober-shield-2020]
+![Hacktober-shield-2019] ![Hacktober-shield-2020] ![Hacktober-shield-2021] ![Hacktober-shield-2022]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -90,5 +90,7 @@ Obrigado à todos! 🎉👏👍
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- [product-screenshot]: # -->
-[Hacktober-shield]: https://img.shields.io/badge/Hacktoberfest-2019-blueviolet
+[Hacktober-shield-2019]: https://img.shields.io/badge/Hacktoberfest-2019-blueviolet
 [Hacktober-shield-2020]: https://img.shields.io/badge/Hacktoberfest-2020-blueviolet
+[Hacktober-shield-2021]: https://img.shields.io/badge/Hacktoberfest-2021-blueviolet
+[Hacktober-shield-2022]: https://img.shields.io/badge/Hacktoberfest-2022-blueviolet
